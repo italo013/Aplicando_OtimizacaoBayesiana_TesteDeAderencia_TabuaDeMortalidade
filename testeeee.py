@@ -54,7 +54,7 @@ df_esperados.loc['Total'] = df_esperados.sum(axis=0)
 ary_qui_quadrado = []
 for l3 in range(126+1):
     linha3 = []
-    for c3 in range(106+1):
+    for c3 in range(107):
         if df_esperados.iloc[l3, c3] == 0.0:
             qui_quadrado = 0
             linha3.append(qui_quadrado)
