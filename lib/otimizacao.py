@@ -24,9 +24,9 @@ class OtimizacaoBayesiana(BaseModel):
     @property
     def pbounds(self):
         return {
-            'tabua_index': (0, len(self.tabuas_base) - 1),  # Índice da tábua de mortalidade
-            'fator_agravamento': self.fator_agravamento,  # Intervalo para o agravamento
-            'delay_anos': self.delay_anos  # Intervalo para o delay
+            'tabua_index': (0, len(self.tabuas_base) - 1),
+            'fator_agravamento': self.fator_agravamento,
+            'delay_anos': self.delay_anos
         }
     
     def aplicar_agravamento(self, tabua: np.ndarray, fator: float) -> np.ndarray:
