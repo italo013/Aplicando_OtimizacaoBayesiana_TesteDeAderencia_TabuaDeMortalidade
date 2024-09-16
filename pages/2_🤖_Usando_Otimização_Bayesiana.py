@@ -15,6 +15,8 @@ def main():
     st.title('Aplicando a Otimização Bayesiana')
 
     df_tabuas = pd.read_excel('Funções Biométricas (Com Fórmulas).xlsx', sheet_name='qx')
+    df_tabuas.iloc[:50] = df_tabuas.iloc[:50].fillna(0)
+    df_tabuas.iloc[50:] = df_tabuas.iloc[50:].fillna(1)
     modelo_csv = pd.read_csv('modelo_csv.csv', sep=';')
     
     st.sidebar.subheader("Download do Modelo do csv")
@@ -49,13 +51,13 @@ def main():
     col1, col2, col3 = st.columns(3)
  
     with col1:
-        n_calls = st.slider("n_calls", 1, 200, 20, help="Número total de chamadas à função objetivo. Inclui n_random_starts e n_initial_points.")
+        n_calls = st.slider("n_calls", 1, 200, 75, help="Número total de chamadas à função objetivo. Inclui n_random_starts e n_initial_points.")
 
     with col2:
         random_state = st.slider("random_state", 1, 200, 32, help="Semente aleatória para garantir a reprodutibilidade dos resultados da otimização.")
 
     with col3:
-        n_initial_points = st.slider("n_initial_points", 1, 200, 10, help="Número de pontos iniciais que a otimização deve começar.")
+        n_initial_points = st.slider("n_initial_points", 1, 200, 30, help="Número de pontos iniciais que a otimização deve começar.")
 
     if st.button('Iniciar Otimização', type='primary', on_click=reset_variables):
         with st.spinner('Aguarde enquanto a otimização é realizada...'):

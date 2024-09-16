@@ -12,6 +12,8 @@ def main():
     st.header('Testando a Aderência Manualmente')
 
     df_tabuas = pd.read_excel('Funções Biométricas (Com Fórmulas).xlsx', sheet_name='qx')
+    df_tabuas.iloc[:50] = df_tabuas.iloc[:50].fillna(0)
+    df_tabuas.iloc[50:] = df_tabuas.iloc[50:].fillna(1)
     modelo_csv = pd.read_csv('modelo_csv.csv', sep=';')
     
     st.sidebar.subheader("Download do Modelo do csv")
