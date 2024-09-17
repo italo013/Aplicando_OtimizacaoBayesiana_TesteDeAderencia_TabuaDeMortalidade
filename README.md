@@ -17,7 +17,7 @@ Este projeto foi desenvolvido para simplificar o Teste de Aderência das Tábuas
 │ ├── 1_🔍Teste_Manualmente.py            # Página para teste manual de aderência
 │ ├── 2_🤖Usando_Otimização_Bayesiana.py  # Página para otimização Bayesiana automática
 │ └── 3_📞Contatos.py                     # Página de contatos
-├── 🏠Home.py                             # Página inicial da aplicação Streamlit
+├── Home.py                             # Página inicial da aplicação Streamlit
 ├── Funções Biométricas (Com Fórmulas).xlsx  # Planilha com funções biométricas
 ├── modelo_csv.csv                        # Arquivo CSV modelo para importação de dados
 ├── README.md                             # Documentação do projeto
@@ -53,12 +53,12 @@ Este projeto utiliza uma variedade de tecnologias modernas para implementar a ot
 
 4. Para executar a aplicação Streamlit, use o comando:
 ```bash
-   streamlit run 🏠_Home.py
+   streamlit run Home.py
 ```
 
 ## Funcionalidades
 O projeto de Otimização Bayesiana para melhorar o teste de aderência de tábuas de mortalidade possui as seguintes funcionalidades principais:
-1. **Página Inicial (🏠Home.py):**
+1. **Página Inicial (Home.py):**
     - Visão geral do projeto
     - Explicação dos conceitos dos testes Qui-Quadrado e Kolmogorov-Smirnov
     - Demonstração dos efeitos da aplicação de ajustes (agravamento, suavização e deslocamento) nas tábuas de mortalidade
